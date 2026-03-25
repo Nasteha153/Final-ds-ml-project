@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="so">
 <head>
+    <meta charset="UTF-8">
     <title>Car Price Prediction</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/favicon.png" type="image/png">
+    
+    <!-- JS favicon -->
+    <script>
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        link.type = 'image/x-icon';
+        link.href = '/favicon.ico'; // hubi inaad favicon.ico ku dartay project-ka
+        document.head.appendChild(link);
+    </script>
 </head>
 <body>
 
@@ -43,26 +52,24 @@
             <h2 id="result"></h2>
 
         </div>
+
         <!-- LOADING -->
-   <div id="loading" class="loading">⏳ Predicting...</div>
+        <div id="loading" class="loading" style="display:none;">⏳ Predicting...</div>
 
-   <!-- RESULT -->
- <h2 id="result"></h2>
+        <!-- PROGRESS BARS -->
+        <div class="bar">
+            <p>Linear Regression</p>
+            <div class="progress">
+                <div id="lrBar" style="width:0%;"></div>
+            </div>
+        </div>
 
-  <!-- PROGRESS BARS -->
- <div class="bar">
-  <p>Linear Regression</p>
-  <div class="progress">
-    <div id="lrBar"></div>
-  </div>
-</div>
-
-<div class="bar">
-  <p>Random Forest</p>
-  <div class="progress">
-    <div id="rfBar"></div>
-  </div>
-</div>
+        <div class="bar">
+            <p>Random Forest</p>
+            <div class="progress">
+                <div id="rfBar" style="width:0%;"></div>
+            </div>
+        </div>
     </div>
 
     <!-- RIGHT CARD -->
@@ -86,10 +93,6 @@
 
     </div>
     
-
 </div>
-
 <script src="script.js"></script>
-
 </body>
-</html>

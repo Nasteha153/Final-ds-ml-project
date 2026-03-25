@@ -2,6 +2,8 @@ function predict() {
 
     document.getElementById("loading").style.display = "block";
     document.getElementById("result").innerText = "";
+    document.getElementById("lrBar").style.width = "0%";
+    document.getElementById("rfBar").style.width = "0%";
 
     const data = {
         year: Number(document.getElementById("year").value),
