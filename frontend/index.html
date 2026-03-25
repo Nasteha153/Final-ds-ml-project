@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- LEFT CARD -->
+    <div class="card">
+
+        <h1>🚗 Car Price Prediction</h1>
+        <p class="subtitle">Smart AI-based car valuation system</p>
+
+        <div class="form">
+
+            <input id="year" placeholder="Year" type="number">
+            <input id="km" placeholder="KM Driven" type="number">
+
+            <select id="fuel">
+                <option>Petrol</option>
+                <option>Diesel</option>
+            </select>
+
+            <select id="seller">
+                <option>Individual</option>
+                <option>Dealer</option>
+            </select>
+
+            <select id="transmission">
+                <option>Manual</option>
+                <option>Automatic</option>
+            </select>
+
+            <input id="owner" placeholder="Owner (0,1,2)" type="number">
+
+            <button onclick="predict()">Predict Price 💰</button>
+
+            <p id="error" class="error"></p>
+            <h2 id="result"></h2>
+
+        </div>
+        <!-- LOADING -->
+   <div id="loading" class="loading">⏳ Predicting...</div>
+
+   <!-- RESULT -->
+ <h2 id="result"></h2>
+
+  <!-- PROGRESS BARS -->
+ <div class="bar">
+  <p>Linear Regression</p>
+  <div class="progress">
+    <div id="lrBar"></div>
+  </div>
+</div>
+
+<div class="bar">
+  <p>Random Forest</p>
+  <div class="progress">
+    <div id="rfBar"></div>
+  </div>
+</div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="analytics">
+
+        <h2>📊 Model Performance</h2>
+
+        <div class="box">
+            <p>Linear Regression</p>
+            <span>R² Score: 0.84</span>
+        </div>
+
+        <div class="box">
+            <p>Random Forest</p>
+            <span>R² Score: 0.88</span>
+        </div>
+
+        <div class="recommend">
+            🏆 Recommended: Random Forest
+        </div>
+
+    </div>
+    
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
