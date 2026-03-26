@@ -28,7 +28,7 @@ function predict() {
             document.getElementById("result").innerText = result.error;
         } else {
             document.getElementById("result").innerText =
-                "Estimated Price: " + result.predicted_price;
+                "Predicted Price: " + result.predicted_price;
 
             // 🎯 Animate bars
             document.getElementById("lrBar").style.width = "84%";
