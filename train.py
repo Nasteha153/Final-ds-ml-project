@@ -13,7 +13,7 @@ df = pd.read_csv(CSV_PATH)
 
 # 2) X, y
 X = df.drop(columns=["selling_price"])
-y = df["selling_price"]
+y = df["selling_price"] /20
 
 # 3) Split
 X_train, X_test, y_train, y_test = train_test_split(
